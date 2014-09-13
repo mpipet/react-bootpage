@@ -8,20 +8,19 @@ var Bootpag = React.createClass({displayName: 'Bootpag',
         }
         return {
             total: 20,
-            startPage: 8,
-            page: 8,
+            startPage: 1,
+            page: 1,
             maxVisible: 10,
             nextCallback: function(){},
             prevCallback: function(){},
             nextText: '&raquo;',
             prevText: '&laquo;',
-            increment: 3,
+            increment: 1,
             pageCallback: function(){}
         };
 
     },
 
-    
     handleNext: function(event){
         var num = parseInt(event.currentTarget.getAttribute('data-lp'));
         var update = {page:num, pageStart: this.state.startPage}
@@ -91,9 +90,3 @@ var Bootpag = React.createClass({displayName: 'Bootpag',
 
 });
 
-
-
-React.renderComponent(
-  Bootpag(null ),
-  document.getElementById('app')
-);
