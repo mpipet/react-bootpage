@@ -1,6 +1,6 @@
 /** @jsx React.DOM */
 
-var Bootpag = React.createClass({displayName: 'Bootpag',
+var ReactBootpag = React.createClass({displayName: 'Bootpag',
     
     getInitialState: function(){
         if(this.props.settings){
@@ -87,6 +87,7 @@ var Bootpag = React.createClass({displayName: 'Bootpag',
         );
     }
 
-
 });
 
+
+module.exports = ReactBootpag;

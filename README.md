@@ -7,6 +7,8 @@ Component react for Boostrap pagination
 
 
 ```javascript
+
+var Bootpag = require('react-bootpag');
 var settings = {
   total: 20, // total page number
   startPage: 2, // start page from left 
