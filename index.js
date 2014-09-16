@@ -1,1 +1,1 @@
-module.exports('./dist/react-bootpag');
+module.exports = require('./dist/react-bootpag');
