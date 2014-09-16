@@ -1,1 +1,1 @@
-module.exports('./dist/react-bootpag.min.js');
+module.exports('./dist/react-bootpag');
