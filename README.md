@@ -8,7 +8,7 @@ Use browsify and reactify to use in on client side.
 #Example
 
 
-```javascript
+``` javascript
 
 var Bootpag = require('react-bootpag');
 var settings = {
@@ -25,4 +25,5 @@ var settings = {
 };
 
 <Bootpag settings={settings} />
-...
+
+```
