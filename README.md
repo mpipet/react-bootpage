@@ -3,7 +3,13 @@ react-bootpage
 
 Component react for Boostrap pagination
 
-Use browsify and reactify to use in on client side.
+
+Installation
+------------
+
+``` bash
+$ npm install react-bootpag
+```
 
 #Example
 
@@ -27,3 +33,6 @@ var settings = {
 <Bootpag settings={settings} />
 
 ```
+
+
+
