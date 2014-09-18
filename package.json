@@ -12,7 +12,8 @@
     "Mathieu Pipet"
   ],
   "license": "MIT",
-  "devDependencies": {
+  "dependencies": {
+    "react": "0.11.2"
   },
   "peerDependencies": {
   },
