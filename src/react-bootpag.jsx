@@ -1,5 +1,5 @@
 /** @jsx React.DOM */
-
+var React = require('react');
 var Bootpag = React.createClass({
     
     getInitialState: function(){
