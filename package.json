@@ -1,6 +1,6 @@
 {
   "name": "react-bootpag",
-  "version": "0.3.3",
+  "version": "0.3.5",
   "description": "A bootstrap pagination component for React.js",
   "main": "index.js",
   "repository": {

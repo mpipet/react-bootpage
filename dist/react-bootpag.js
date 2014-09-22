@@ -1,12 +1,9 @@
 /** @jsx React.DOM */
 var React = require('react');
-var ReactBootpag = React.createClass({displayName: 'Bootpag',
+var ReactBootpag = React.createClass({displayName: 'ReactBootpag',
     
     getInitialState: function(){
-        if(this.props.settings){
-            return this.props.settings;
-        }
-        return {
+        var defaultSett = {
             total: 20,
             startPage: 1,
             page: 1,
@@ -18,7 +15,16 @@ var ReactBootpag = React.createClass({displayName: 'Bootpag',
             increment: 1,
             pageCallback: function(){}
         };
+        
+        if(this.props.settings){
 
+            var settingsKeys = Object.keys(this.props.settings);
+            for (var i = 0; i <= settingsKeys.length; i++ ){
+                defaultSett[settingsKeys[i]] = this.props.settings[settingsKeys]; 
+
+            }
+        }
+        return defaultSett;
     },
 
     handleNext: function(event){
@@ -55,31 +61,31 @@ var ReactBootpag = React.createClass({displayName: 'Bootpag',
         var list = [];
 
         if(this.state.prevText){
-            list.push( React.DOM.li( 
-                        {key:'p',
-                        'data-lp':Math.max(1,this.state.page -this.state.increment),
-                        onClick:this.handlePrev, 
-                        className:this.state.page == 1 ? 'prev disabled': 'prev'  } , 
-                            React.DOM.a( {dangerouslySetInnerHTML:{__html: this.state.prevText}})
+            list.push( React.DOM.li({
+                        key: 'p', 
+                        'data-lp': Math.max(1,this.state.page -this.state.increment), 
+                        onClick: this.handlePrev, 
+                        className: this.state.page == 1 ? 'prev disabled': 'prev'}, 
+                            React.DOM.a({dangerouslySetInnerHTML: {__html: this.state.prevText}})
                         ));
         }
         for(var c = this.state.startPage; c<= Math.min(this.state.total, this.state.startPage + this.state.maxVisible -1 ); c++){
-            list.push(React.DOM.li( {className:this.state.page== c ? 'disabled' : '', onClick:this.handlePage, key:c, 'data-lp':c}, React.DOM.a(null, c)));
+            list.push(React.DOM.li({className: this.state.page== c ? 'disabled' : '', onClick: this.handlePage, key: c, 'data-lp': c}, React.DOM.a(null, c)));
         }
         if(this.state.nextText){
-            list.push( React.DOM.li( 
-                        {onClick:this.handleNext,
-                        key:'n',
-                        'data-lp':Math.min(this.state.page + this.state.increment, this.state.total), 
-                        className:this.state.page == this.state.total ? 'next disabled': 'next'  }, 
-                            React.DOM.a( {dangerouslySetInnerHTML:{__html: this.state.nextText}})
+            list.push( React.DOM.li({
+                        onClick: this.handleNext, 
+                        key: 'n', 
+                        'data-lp': Math.min(this.state.page + this.state.increment, this.state.total), 
+                        className: this.state.page == this.state.total ? 'next disabled': 'next'}, 
+                            React.DOM.a({dangerouslySetInnerHTML: {__html: this.state.nextText}})
                         ));
         }        
  
 
         return (
 
-            React.DOM.ul( {className:"pagination bootpag"}, 
+            React.DOM.ul({className: "pagination bootpag"}, 
                 list
             )
         
@@ -87,7 +93,6 @@ var ReactBootpag = React.createClass({displayName: 'Bootpag',
         );
     }
 
+
 });
-
-
 module.exports = ReactBootpag;

@@ -1,12 +1,9 @@
 /** @jsx React.DOM */
 var React = require('react');
-var Bootpag = React.createClass({
+var ReactBootpag = React.createClass({
     
     getInitialState: function(){
-        if(this.props.settings){
-            return this.props.settings;
-        }
-        return {
+        var defaultSett = {
             total: 20,
             startPage: 1,
             page: 1,
@@ -18,7 +15,16 @@ var Bootpag = React.createClass({
             increment: 1,
             pageCallback: function(){}
         };
+        
+        if(this.props.settings){
 
+            var settingsKeys = Object.keys(this.props.settings);
+            for (var i = 0; i <= settingsKeys.length; i++ ){
+                defaultSett[settingsKeys[i]] = this.props.settings[settingsKeys]; 
+
+            }
+        }
+        return defaultSett;
     },
 
     handleNext: function(event){
@@ -89,4 +95,4 @@ var Bootpag = React.createClass({
 
 
 });
-
+module.exports = ReactBootpag;
