@@ -19,8 +19,8 @@ var ReactBootpag = React.createClass({displayName: 'ReactBootpag',
         if(this.props.settings){
 
             var settingsKeys = Object.keys(this.props.settings);
-            for (var i = 0; i <= settingsKeys.length; i++ ){
-                defaultSett[settingsKeys[i]] = this.props.settings[settingsKeys]; 
+            for (var i = 0; i < settingsKeys.length; i++ ){
+                defaultSett[settingsKeys[i]] = this.props.settings[settingsKeys[i]]; 
 
             }
         }
