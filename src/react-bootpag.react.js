@@ -62,7 +62,7 @@ var ReactBootpag = React.createClass({
 
         if(this.state.prevText){
           var page = Math.min(this.state.page + this.state.increment, this.state.total);
-          var href = this.props.href.replace(':page', page);
+          var href = this.state.href.replace(':page', page);
           list.push( <li 
                         key={'p'}
                         data-lp={Math.max(1,this.state.page -this.state.increment)}
@@ -72,12 +72,12 @@ var ReactBootpag = React.createClass({
                         </li>);
         }
         for(var c = this.state.startPage; c<= Math.min(this.state.total, this.state.startPage + this.state.maxVisible -1 ); c++){
-          var href = this.props.href.replace(':page', c);
-          list.push(<li className={this.state.page== c ? 'active' : ''} href={href} onClick={this.handlePage} key={c} data-lp={c}><a>{c}</a></li>);
+          var href = this.state.href.replace(':page', c);
+          list.push(<li className={this.state.page== c ? 'active' : ''} onClick={this.handlePage} key={c} data-lp={c}><a href={href}> {c}</a></li>);
         }
         if(this.state.nextText){
             var page = Math.min(this.state.page + this.state.increment, this.state.total);
-            var href = this.props.href.replace(':page', page);
+            var href = this.state.href.replace(':page', page);
             list.push( <li 
                         onClick={this.handleNext}
                         key={'n'}
