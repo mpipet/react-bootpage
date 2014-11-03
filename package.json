@@ -1,13 +1,15 @@
 {
   "name": "react-bootpag",
-  "version": "0.3.6",
+  "version": "0.4.1",
   "description": "A bootstrap pagination component for React.js",
   "main": "index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/mpipet/react-bootpage.git"
   },
-  "bugs": "https://github.com/mpipet/react-bootpag/issues",
+  "bugs": {
+    "url": "https://github.com/mpipet/react-bootpag/issues"
+  },
   "authors": [
     "Mathieu Pipet"
   ],
@@ -15,8 +17,7 @@
   "dependencies": {
     "react": "0.11.2"
   },
-  "peerDependencies": {
-  },
+  "peerDependencies": {},
   "tags": [
     "react",
     "pagination",
@@ -30,5 +31,27 @@
   ],
   "browserify-shim": {
     "react": "global:React"
-  }
+  },
+  "homepage": "https://github.com/mpipet/react-bootpage",
+  "_id": "react-bootpag@0.3.6",
+  "_from": "react-bootpag@",
+  "dist": {
+    "shasum": "b43a304065866091a598439c789fc402e26165bd",
+    "tarball": "http://registry.npmjs.org/react-bootpag/-/react-bootpag-0.3.6.tgz"
+  },
+  "_npmVersion": "1.4.6",
+  "_npmUser": {
+    "name": "mpipet",
+    "email": "mathieu.pipet@hotmail.fr"
+  },
+  "maintainers": [
+    {
+      "name": "mpipet",
+      "email": "mathieu.pipet@hotmail.fr"
+    }
+  ],
+  "directories": {},
+  "_shasum": "b43a304065866091a598439c789fc402e26165bd",
+  "_resolved": "https://registry.npmjs.org/react-bootpag/-/react-bootpag-0.3.6.tgz",
+  "readme": "ERROR: No README data found!"
 }
